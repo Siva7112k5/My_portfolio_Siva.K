@@ -1,0 +1,132 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.navbar-container.scrolled {
+  padding: 1rem 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  letter-spacing: -0.5px;
+}
+
+.navbar-logo span {
+  color: var(--color-accent);
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--color-text-main);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-main);
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--color-bg-primary);
+    box-shadow: var(--shadow-lg);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+    padding: 6rem 2rem 2rem;
+  }
+
+  .mobile-menu.open {
+    right: 0;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .mobile-nav-links a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    display: block;
+  }
+  
+  .mobile-resume-btn {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
