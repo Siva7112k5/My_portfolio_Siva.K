@@ -55,8 +55,16 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Backdrop overlay */}
+      {mobileMenuOpen && <div className="mobile-overlay" onClick={toggleMenu}></div>}
+
       {/* Mobile Menu */}
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        {/* Close button inside the panel */}
+        <button className="mobile-close-btn" onClick={toggleMenu} aria-label="Close menu">
+          <X size={26} />
+        </button>
+
         <ul className="mobile-nav-links">
           {navLinks.map((link) => (
             <li key={link.name}>
