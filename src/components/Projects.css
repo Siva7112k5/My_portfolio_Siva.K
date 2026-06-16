@@ -113,6 +113,20 @@
 .browser-chrome span:nth-child(2) { background: #fbbf24; }
 .browser-chrome span:nth-child(3) { background: #34d399; }
 
+.browser-url {
+  flex: 1;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  margin-left: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .browser-body {
   padding: 3rem 2rem;
   display: flex;
@@ -123,15 +137,19 @@
   text-align: center;
 }
 
-.mockup-emoji {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+.browser-body-img {
+  padding: 0;
+  overflow: hidden;
+  min-height: unset;
 }
 
-.mockup-name {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--color-text-main);
+.mockup-screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0 0 16px 16px;
+  object-fit: cover;
+  max-height: 280px;
 }
 
 /* Other Projects */

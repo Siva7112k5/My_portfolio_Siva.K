@@ -15,8 +15,8 @@ const About = () => {
             <div className="profile-image-wrapper">
               <div className="image-border-spin"></div>
               <img 
-                src="https://ui-avatars.com/api/?name=Siva+K&size=400&background=2563eb&color=fff&font-size=0.33" 
-                alt="Siva K Profile" 
+                src="/profile.png" 
+                alt="Siva K - Full Stack Developer" 
                 className="profile-img"
               />
             </div>

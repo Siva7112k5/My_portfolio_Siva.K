@@ -106,10 +106,10 @@ const Projects = () => {
                 <div className="featured-mockup">
                   <div className="browser-chrome">
                     <span></span><span></span><span></span>
+                    <div className="browser-url">projecttriowise.vercel.app</div>
                   </div>
-                  <div className="browser-body">
-                    <div className="mockup-emoji">{project.emoji}</div>
-                    <p className="mockup-name">{project.title}</p>
+                  <div className="browser-body browser-body-img">
+                    <img src="/triowise.png" alt="Triowise Marketplace Screenshot" className="mockup-screenshot" />
                   </div>
                 </div>
               </div>
